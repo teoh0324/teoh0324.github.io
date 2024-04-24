@@ -1,581 +1,554 @@
 <!DOCTYPE html>
-<html>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
 <style>
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-/*=============================================
-Css Indexing
-===============================================
-1 Base CSS
-
-===============================================*/
-
-
-
-
-
-/*===========================================
-Base CSS
-============================================*/
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	@import url(https://weloveiconfonts.com/api/?family=entypo|fontawesome);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
 }
 
-html {
-  height: 100%;
+/* Utils */
+
+.clear {
+	clear: both;
 }
+.purple {
+	color: #837c9a;
+}
+
+.block {
+	margin: 25px 30px;
+}
+	.block h1 {
+		margin-left: -5px;
+		font-weight: 200;
+	}
+
+.last.block {
+	margin-bottom: 110px;
+}
+
+.horizontal_list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+	.horizontal_list li {
+		float: left;
+	}
+	.horizontal_list li:before {
+		content: none;
+	}
+	.horizontal_list li { 
+		padding-left: 0; 
+		text-indent: 0;
+	}
+
+.horizontal_line{
+	margin: 34px 0 0 30px;
+	height: 26px;
+	position: relative;	
+}
+	.line_left,
+	.line_right{
+		border-top: 1px solid #434247;
+		width: 305px;
+		margin-top: 13px;
+	}
+	.line_left{
+		float: left;
+	}
+	.line_right {
+		float: right;
+	}
+	.left_circle, 
+	.central_circle, 
+	.right_circle {
+		background: rgb(69,68,73);
+		background: rgba(255,255,255, 0.15);
+		position: absolute;
+		border-radius: 50px;
+	}
+	.left_circle, 
+	.right_circle {
+		width: 13px;
+		height: 13px;
+		top: 7px;
+	}
+	.left_circle{
+		left: 314px;
+	}
+	.central_circle{
+		width: 26px;
+		height: 26px;		
+		top: 0px;
+		left: 322px;
+	}
+	.right_circle{
+		left: 343px;
+	}
+	
+/* Main tags */
+
 body {
-  height: 100%;
-  font-family: 'Quicksand', sans-serif;
- color: rgba(0, 0, 0, 0.6);
-  box-sizing: border-box;
-  font-size: 14px;
-  overflow: hidden;
-  background: #fafafa;
-}
-label {
-  padding: 0;
-  margin: 0;
-}
-ul, li, ol {
-  padding: 0;
-  margin: 0;
-}
-li{
-  list-style: none;
-}
-a, img {
-  border: 0;
-  outline: none;
-  text-decoration: none;
-}
-input::-moz-focus-inner {
-  border: 0;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-}
-input, select, textarea, button{
-  font-family: 'Muli', sans-serif;
-}
-input:focus, select:focus, textarea:focus, button:focus{
-  outline: 0;
+	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png) repeat;
+	margin: 0;
 }
 
-a {
-  color: inherit;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
-
-
-p {
-  margin-bottom: 1.5em; }
-
-h1, h2, h3, h4, h5, h6 {
-  color: #000;
-  font-family: "Quicksand", Arial, sans-serif;
-  font-weight: 400;
-  margin: 0 0 30px 0; }
-
-
-i.material-icons {
-  font-size: inherit;
-  line-height: inherit;
+h1,h2,h3, h4 {
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 300;
+	color: #48DA9B;
 }
-::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
+	h1 {
+		font-size: 48px;
+		font-weight: 300;
+		margin: 20px 0;
+	}
+	h2 {
+		font-size: 28px;
+		margin: 32px 0 24px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+blockquote {
+	font-style: italic;
+	margin: 25px 0;
+	padding-left: 20px;
+	border-left: 2px solid #48DA9B;
 }
-
-::-webkit-scrollbar
-{
-  width: 5px;
-  height: 5px;
-  background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar-thumb
-{
-
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #777;
+	
+blockquote, p , a, li {
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	color: #e4e3e8;
 }
 
-/*===========================================
-Text Styles CSS
-============================================*/
-.t-title-size{
-  font-size: 18px;
-}
-.t-bold{
-  font-weight: 600;
-}
-.t-normal{
-  font-weight: normal;
-}
-.t-center{
-  text-align: center;
-}
-.t-right{
-  text-align: right;
+a:focus { 
+    outline: none;
 }
 
+ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+	li { 
+		padding-left: 1em; 
+		text-indent: -.7em;
+	}
+	li:before {
+		content: "• ";
+		color: #837c9a;
+		font-size: 20px;
+		padding-right: 8px;
+	}
 
-/*===========================================
-Padding & Margins CSS
-============================================*/
-.p-5{
-  padding: 5px;
-}
-.p-10{
-  padding: 10px;
-}
-.p-15{
-  padding: 15px;
-}
-.p-20{
-  padding: 20px;
-}
-.p-25{
-  padding: 25px;
-}
-.p-30{
-  padding: 30px;
-}
-.p-35{
-  padding: 35px;
-}
-.p-40{
-  padding: 40px;
-}
-.p-45{
-  padding: 45px;
-}
-.p-50{
-  padding: 50px;
-}
+/* Containers size */
 
-.p-right5{
-  padding-right: 5px;
+#main_container {
+	width: 960px;
+	margin: 0 auto;
 }
-.p-right10{
-  padding-right: 10px;
-}
-.p-right15{
-  padding-right: 15px;
-}
-.p-right20{
-  padding-right: 20px;
-}
-.p-right25{
-  padding-right: 25px;
-}
-.p-right30{
-  padding-right: 30px;
-}
+	#header {
+		height: 130px;
+		border-bottom: 1px solid #403F44;
+	}
+		.header_logotype_container {
+			width: 260px;
+			height: 130px;
+			border-right: 1px solid #403F44;
+			float: left;
+		}
+		.header_menu_container {
+			height: 130px;
+			width: 699px;
+			float: left;
+		}
+			.header_menu_container a {
+				font-family: 'Lato', Helvetica, sans-serif;
+			}
+	#left_col {
+		width: 260px;
+		float: left;
+	}
+	#content_container {
+		width: 699px;
+		border-left: 1px solid #403F44;
+		float: left;
+	}
+	#footer {
+		width: 960px;
+		height: 60px;
+		border-top: 1px solid #403F44;
+		display: inline-block;
+	}
 
-.p-left5{
-  padding-left: 5px;
-}
-.p-left10{
-  padding-left: 10px;
-}
-.p-left15{
-  padding-left: 15px;
-}
-.p-left20{
-  padding-left: 20px;
-}
-.p-left25{
-  padding-left: 25px;
-}
-.p-left30{
-  padding-left: 30px;
-}
+/* HEADER */
 
-.m-5{
-  margin: 5px;
+.logotype_name{
+	text-transform: uppercase;
+	font-size: 32px;
+	margin: 43px 0 0;
 }
-.m-10{
-  margin: 10px;
-}
-.m-15{
-  margin: 15px;
-}
-.m-20{
-  margin: 20px;
-}
-.m-25{
-  margin: 25px;
-}
-.m-30{
-  margin: 30px;
-}
-.m-35{
-  margin: 35px;
-}
-.m-40{
-  margin: 40px;
-}
-.m-45{
-  margin: 45px;
-}
-.m-50{
-  margin: 50px;
+.logotype_occupation{
+	text-transform: uppercase;
+	margin-top: 5px;
+	color: #5ce2af;
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding-left: 7px;
 }
 
-/*===========================================
-Display Styles
-============================================*/
-.d-flex{
-  display: flex;
+.download_print_buttons {
+	width: 225px;
+	height: 45px;
+	float: right;
 }
-.d-flex-align-center{
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+	.download_print_buttons a {
+		text-decoration: none;
+		font-size: 12px;
+		font-family: 'Lato', Helvetica, sans-serif;
+		font-style: italic;
+		line-height: 45px;
+		padding: 16px 17px;
+		background: #353638;
+	}
+		.download_print_buttons a:hover {
+			background: #020609;
+		}
+		.download_print_buttons .icon {
+			color: #02070a;
+			padding-right: 6px;
+			font-style: normal;
+			font-size: 18px;
+		}
+		.icon-angle-double-right {
+			position: relative;
+			top: 2px;
+		}
+			.download_print_buttons a:hover .icon {
+				color: #e4e3e8;
+			}
+			
+.header_menu {
+	width: 699px;
+	margin-top: 40px;
+	margin-left: 5px;
 }
-.d-flex-align-center-column{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.flex-1{
-  flex: 1;
-}
-.flex-2{
-  flex: 2;
-}
+	.header_menu a{
+		text-decoration: none;
+		padding: 0 20px;
+		border-left: 1px solid #e4e3e8;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.header_menu a.no_border{
+		border-left: none;
+	}
+		.header_menu a:hover {
+			color: #837c9a;
+		}
+		
+/* LEFT NAV */
 
-
-
-/*===========================================
-Page Styles
-============================================*/
-
-.wraper {
-    width: 100%;
-    height: 100%;
-}
-
-
-.container {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.left-content {
-    width: 300px;
-    overflow-y: auto;
-    height: 100%;
-    background: #fff;
-    border-right: 1px solid rgba(221, 221, 221, 0.38);
-    display: flex;
-    flex-direction: column;
-}
-
-.main-content {
-    flex: 1;
-    overflow-y: auto;
-    margin-left: 10px;
-    background: #fff;
-    border-left: 1px solid rgba(221, 221, 221, 0.38);
-}
-.logo {
-    display: flex;
-    justify-content: flex-end;
+#left_nav h2 {
+	margin: 0;
+	font-size: 24px;
 }
 
-.logo a {
-    color: #fff;
-    text-align: right;
-    background: #000;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    line-height: 30px;
-    font-weight: 500;
+.profile_frame{
+	width: 230px;
+	height: 260px;
+	background: black;
+	border: 1px solid #403F44;
+	margin-top: 30px;
+}
+	.profile_picture{
+		width: 210px;
+		height: 240px;
+		margin:10px;
+		background: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/86033/profile/profile-512_3.jpg) 100% /210px no-repeat;
+	}
+
+.hello_content,
+.contact_details_content {
+	margin-top: 25px;
 }
 
-.nav {
-    flex: 1;
-    /* display: flex; */
-    justify-content: flex-end;
-    margin: 50px 0px;
+.hello_content{
+	width: 230px;
+}
+.contact_details_content h2 + p.purple{
+	margin-top: 10px;
+}
+.contact_details_content p{
+	margin: 0;
+}
+.contact_details_content p.purple{
+	margin-top: 25px;
 }
 
-.nav ul li, .nav ul li a {
-    display: flex;
-    justify-content: flex-end;
+.send_message_button,
+.special_button {
+	margin-top: 25px;
+	display: block;
+	background: #48DA9B;
+	width: 230px;
+	height: 50px;
+	position: relative;
+	z-index: 1;
 }
+	.cut1:after {
+		content: "";
+		position: absolute;
+		bottom: -19px;
+		left: -20px;
+		width: 30px;
+		height: 30px;
+		z-index: 9;
+		background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png) repeat;
+    transform: rotate(45deg);
+	}
+	.cut2:before {
+	    content: "";
+	    position: absolute;
+	    top: -19px;
+	    right: -20px;
+	    width: 30px;
+	    height: 30px;
+	    z-index: 9;
+	    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png) repeat;
+      transform: rotate(45deg);
+	}
+	.content {
+	    text-align: center;		
+	    color: #04080b;
+	    width: 100%;
+	    height: 40px;
+	    position: absolute;
+	    z-index: 2;
+	    font: 18px 'Lato', Arial, sans-serif;
+	    margin: 0;
+	    padding: 16px 0 0;
+        top: -4px;
+        bottom: 10px;
+	    border-top: 1px solid #403F44;
+	    border-bottom: 1px solid #403F44;
+	}
+	.send_message_button:hover,
+	.special_button:hover {
+		background: #29C782;
+	}
 
-.nav ul li a {
-    padding: 8px 0px;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.4);
-    letter-spacing: 1px;
-    font-weight: 500;
-    position: relative;
+.get_social_content {
+	margin-top: 15px;
 }
-
-.nav ul li a:hover {
-    color: #000;
-}
-.nav ul li a:after {
-    content: "";
-    width: 0;
-    height: 1px;
-    background: #000;
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0;
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.nav ul li a:hover:after {
-    width: 100%;
-    -webkit-transform: scaleX(1);
-    -moz-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    -o-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-.left-footer {
-    color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.foot-contact, .social-icons ul, .copy-rights {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.social-icons ul li {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-}
-
-.foot-contact ul {
-    display: flex;
-    flex-direction: column;
-}
-
-.foot-contact ul li {
-    justify-content: flex-end;
-    display: flex;
-    margin: 2px 0px;
-}
-
-.foot-contact {
-   margin: 5px 0px;
-}
-
-
-
-.social-icons ul li a {
-    padding: 5px 8px;
-    font-size: 16px;
-}
-
-
-.social-icons ul li a:hover {
-  color: #000;
-  transform: scale(1.2) translateY(-5px);
-}
-.user-profile {
-    padding-left: 50px;
-}
-
-.sm-text {
-    letter-spacing: 2.1px;
-    font-weight: normal;
-    color: #222222;
-    font-size: 14px;
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-}
-
-.name {
-    font-size: 40px;
-    text-transform: uppercase;
-    margin: 15px 0px;
-    color: #222222;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-}
-
-.role {
-    font-size: 18px;
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: #222222;
-}
-
-.text {
-   
-    font-size: 15px;
-}
-
-.pr-list {
-    margin: 30px 0px;
-    
-}
-
-.pr-list ul li {
+  .get_social_content h2{
     margin-bottom: 8px;
+  }
+	.social_icons {
+		margin-left: -8px;
+	}
+	.social_icons a {
+		font-size: 35px;
+		text-decoration: none;
+		color: #000507;
+		padding: 0;
+		padding: 0 5px;
+	}
+		.social_icons a span.invisible {
+			display:none;
+		}
+		.social_icons .facebook:hover{
+			background: #3b5998;
+			color: #dfe3ee;
+			border-top-right-radius: 50px;
+			border-bottom-left-radius: 50px;
+		}
+		.social_icons .twitter:hover{
+			background: #00B0ED;
+			color: #fff;
+			border-top-left-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+		.social_icons .linkedin:hover{
+			background: #007bb6;
+			color: #fff;
+			border-top-right-radius: 50px;
+			border-bottom-left-radius: 50px;
+		}
+
+.footer_name {
+	font-style: italic;
+	margin-top: 20px;
 }
 
-.pr-list ul li i {
-    width: 18px;
-}
-.social-icons-head ul {
-    display: flex;
-}
+/* Profile Content */
 
-.social-icons-head ul li a {
-    padding: 5px 10px;
-    font-size: 22px;
-    transition: all .3s;
-        display: flex;
+.profile_quote {
+	position: relative;
+	/* margin-left: 5px; */
 }
+	.profile_quote p {
+		font-size: 17px;
+		width: 455px;
+	}
+	.profile_quote  .entypo-quote {
+		color: #3d3a41;
+		font-size: 80px;
+    font-style: normal;
+		position: absolute;
+		top: -20px;
+		right: 70px;
+		cursor: default;
+	}
 
-.social-icons-head ul li:nth-child(1) a {
-    padding-left: 0;
+.philosophy_content {
+	margin-top: 20px;
 }
-
-.social-icons-head ul li a:hover {
-    color: #000;
-    transform: scale(1.2) translateY(-5px);
-}
-.sec-title {
-    margin-bottom: 50px;
-}
-
-.pg-title {
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    line-height: 1.8;
-    color: #000;
-}
-
-.pg-sub-title {
-    margin-bottom: 10px;
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #999999;
-    font-weight: 500;
-    letter-spacing: 5px;
-}
-
+	.philosophy_content p {
+		margin: 0;
+		width: 370px;
+		float: left;
+	}
+	.philosophy_content ul {
+		float: left;
+		padding-left: 40px;
+	}
 </style>
-<head>
-	<title>My Resume</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
-	<div class="wraper">
-		<div class="container">
-		<div class="left-content p-30">
-			<div class="logo">
-				<a href="index.html">
-					<span>My</span>
-					<span>Resume</span>
-				</a>
-			</div>
-			<div class="nav">
-				<ul>
-					<li><a href="#Home">Home</a></li>
-					<li><a href="#About">About</a></li>
-					<li><a href="">Contact</a></li>
-				</ul>
-			</div>
-			<div class="left-footer">
-				<div class="social-icons">
-					<ul>
-						<li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-						<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-				<div class="foot-contact">
-					<ul>
-						<li>wenteeteoh2007@gmail.com</li>
-						<li>+60 183615717</li>
-					</ul>
-				</div>
-				
-			</div>
-
+<!-- MAIN CONTAINER -->
+		<div id="main_container">
+      <!-- HEADER -->
+      <div id="header">
+        <!-- LOGOTYPE/NAME -->
+        <div class="header_logotype_container">
+          <h1 class="logotype_name">Javier <span class="purple">Latorre</span></h1>
+          <h2 class="logotype_occupation">Frontend Web Developer</h2>
+        </div>
+        <!-- MAIN MENU -->
+        <div class="header_menu_container">
+          <ul class="download_print_buttons horizontal_list">
+            <li><a href="#"><span class="icon entypo-download"></span>Download CV</a></li>
+            <li><a href="#"><span class="icon entypo-print"></span>Print CV</a></li>
+          </ul>
+          <div class="clear"></div>
+          <ul class="header_menu horizontal_list">
+            <li><a class="no_border purple" href="#">Profile</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Work Experience</a></li>
+            <li><a href="#">Featured Projects</a></li>
+            <li><a href="#">Awards</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- LEFT COL -->
+      <div id="left_col">
+        <div class="profile_frame">
+          <div class="profile_picture"></div>
+          <!-- <img src="images/javier_latorre.jpg" alt="profile picture"> -->
+        </div>
+        <div class="hello_content">
+          <h2>Hello!</h2>
+          <p>I'm passionate about technology and human behavior, hardworker and a fast-learner with experience in around 10 different countries studying, working and volunteering.</p>
+        </div>
+        <div class="contact_details_content">
+          <h2>Contact details</h2>
+          <p class="purple">Phone:</p>
+          <p>+34 123 456 789</p>
+          <p class="purple">Email:</p>
+          <p>jlalovi@gmail.com</p>
+          <p class="purple">Adress:</p>
+          <p>Someplace, 5</p>
+          <p>Jaén, Spain</p>
+          <p>23001</p>
+        </div>
+        <a href="mailto:jlalovi@gmail.com" class="send_message_button">
+          <span class="cut1"></span>
+          <span class="cut2"></span>
+          <span class="content">Send me a message <span class="fontawesome-double-angle-right"></span></span>
+        </a>
+        <div class="get_social_content">
+          <h2>Get social</h2>
+          <ul class="social_icons horizontal_list">
+            <li><a class="facebook" href="https://www.facebook.com/jlalovi"><span class="entypo-facebook-circled"></span><span class="invisible">Facebook</span></a></li>
+            <li><a class="twitter" href="https://twitter.com/jlalovi"><span class="entypo-twitter-circled"></span><span class="invisible">Twitter</span></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/in/jlalovi/en"><span class="entypo-linkedin-circled"></span><span class="invisible">LinkedIn</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- PROFILE CONTENT -->
+      <div id="content_container">				
+        <div class="block">
+          <h1>Profile</h1>
+          <blockquote class="profile_quote">
+            <p>"There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning."</p>
+            <p>Jiddu Krishnamurti.</p>
+            <span class="entypo-quote"></span>
+          </blockquote>
+        </div>
+        <div class="block">
+          <h2>A few words about me</h2>
+          <p>Until now, in my life, I change from active moments with a lot of variety, challenges and improvisations, to moments of tranquility and stability, being difficult to stay in a place during a long time. I consider myself a tolerant and respectful person with open mind and quite honest. I really like to listen people stories and backgrounds and their different experiences around the world.</p>				
+        </div>
+        <div class="horizontal_line">
+          <div class="line_left"></div>
+          <div class="left_circle"></div>
+          <div class="central_circle"></div>
+          <div class="right_circle"></div>
+          <div class="line_right"></div>
+        </div>
+        <div class="block">
+          <h2>Philosophy</h2>
+          <p>I belive in ethic and moral not in imposed rules that you "have to" do or follow.</p>
+          <div class="philosophy_content">
+            <p>I believe life is made from different shades of grey, not from black and white. Furthermore, as a human being with rationality, I think it is our duty to take care of the world and treat others as one would like others to treat oneself. This way of perceiving reality affects my beliefs and my way of behaving. Summarizing on several points:</p>
+            <ul>
+              <li>Pragmatic</li>
+              <li>Honest</li>
+              <li>Respectful</li>
+              <li>Open-minded</li>
+              <li>Coherent</li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="horizontal_line">
+          <div class="line_left"></div>
+          <div class="left_circle"></div>
+          <div class="central_circle"></div>
+          <div class="right_circle"></div>
+          <div class="line_right"></div>
+        </div>
+        <div class="last block">
+          <h2>Interests & Hobbies</h2>
+          <p>I'm passionate about technology and human behavior, both determine almost all my interests and hobbies:</p>
+          <ul>
+            <li>Visiting new places</li>
+            <li>Meeting people</li>
+            <li>Having new experiences</li>
+            <li>Hiking and Biking</li>
+            <li>Web Developing</li>
+            <li>Computer Gamming</li>
+            <li>Manga and Anime</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <!-- FOOTER -->
+      <div id="footer">
+        <p class="footer_name">Javier Latorre CV 2015</p>
+      </div>
 		</div>
-		<div class="main-content">
-			<div class="section1 p-30" id="Home">
-			<div class="sec-title">
-	<div class="pg-sub-title">Home</div>
-	<div class="pg-title">My Profile</div>
-			</div>
-				<div class="d-flex-align-center">
-				<div class="user-img flex-1"><img src="me.jpeg" width:60%></div>
-				<div class="user-profile flex-1">
-					<div class="pro-details">
-						<div class="sm-text">HELLO EVERYBODY, I AM</div>
-						<div class="name">Teoh Wen Tee</div>
-						<div class="role">from 5B</div>
-
-					</div>
-					<div class="pr-list">
-						<ul>
-							<li><i class="fa fa-calendar" aria-hidden="true"></i> 24th March, 2007</li>
-							<li><i class="fa fa-phone" aria-hidden="true"></i> 60183615717</li>
-							<li><i class="fa fa-envelope" aria-hidden="true"></i> wenteeteoh2007@gmail.com</li>
-						</ul>
-					</div>
-			<div class="social-icons-head">
-					<ul>
-						<li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-						<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-
-				</div>
-			</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-</body>
-</html>
